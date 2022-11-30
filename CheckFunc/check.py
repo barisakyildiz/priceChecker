@@ -9,9 +9,14 @@ class FileOp:
         self.prices_file_name = "prices.csv"
         self.SAVE_TO_CSV = True
     
-    def get_from_url(self, csv):
+    def getFromUrl(self, csv):
         url_dataframe = pd.read_csv(csv)
-        
+        return url_dataframe
+    
+    def processProd(self, dataframe):
+        for prod in dataframe.to_dict("records"):
+            pass #will be back
+
 
 def main():
     pass
