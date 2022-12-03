@@ -19,11 +19,13 @@ class FileOp:
         updated = []
         dataframe = self.getFromUrl()
         for prod in dataframe.to_dict("records"):
+            print("BEFORE ---> " + str(prod))
             webop = WebOp(prod["url"])
             html = webop.getHTML(prod["url"])
             prod["price"] = webop.returnPrice(html)
             prod["alert"] = prod["price"] < prod["alert_price"]
             updated.append(prod)
+            print("AFTER ---> " + str(prod) + "\n\n")
             del webop
         return pd.DataFrame(updated)
 
@@ -32,12 +34,17 @@ class WebOp:
         self.url = url
     
     def getHTML(self, url):
-        html = requests.get(url)
-        return html.text
+        r_obj = requests.Session()
+        r_soup = r_obj.get("https://www.wildberries.ru")
+        return r_soup
     
     def returnPrice(self, html):
-        s = BeautifulSoup(html, "lxml")
-        el = s.select_one(".price_color") #CHANGE FOR WILDBERRIES
+        soup = BeautifulSoup(html.content , "lxml")
+        hidden_inputs = soup.find_all("price-block__final-price",type="hidden")
+        url_needed = "aspx_endpoint"
+        print("SOUP --> \n\n"+ str(soup) + "\n\n")
+        el = soup.select_one(".price-block__price-wrap")
+        print("EL --> \n\n"+ str(el) + "\n\n")
         price = Price.fromstring(el.text)
         return price.amount_float
 
