@@ -1,4 +1,4 @@
-from pythonsrc import check
+from . import check
 from os import remove
 
 def main():
