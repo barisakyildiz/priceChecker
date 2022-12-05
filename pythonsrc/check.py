@@ -83,7 +83,6 @@ class FileOp:
                     old_counter += 1
                     dicti = {}
                     self.SEND_NOTIFICATION = False
-                    system("clear")
                 group_number += 1
             df = pd.DataFrame(updated)
             df.to_csv(self.PRICES_CSV, mode="w")

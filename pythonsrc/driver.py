@@ -8,6 +8,9 @@ class Driver:
         options = Options()
         options.headless = True
         options.add_argument("--window-size=1920,1080")
+        options.page_load_strategy = 'eager'
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
         DRIVER_PATH = 'chromedriver.exe'
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH, options=options)
         self.driver.get(url)
