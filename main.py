@@ -1,4 +1,4 @@
-from CheckFunc import check
+from pythonsrc import check
 from os import remove
 
 def main():
