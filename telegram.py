@@ -8,6 +8,7 @@ chat_id = os.getenv('CHAT_ID')"""
 API_KEY = '5871023940:AAEaD45sHcXp8xtOB-ggSq6Q8RBsHWEzCf4'
 bot = telebot.TeleBot(API_KEY)
 chat_id = '1498114607'
+nikita_chat_id = '525390336'
 
 def createMessage(old_price, new_price, discount, url, name, our_price, our_discount):
     mesaj = "{}\n\
@@ -24,11 +25,14 @@ def sendNot(msg):
     bot.send_message(chat_id=chat_id,
                      text=msg,
                      parse_mode='HTML')
+                    
+def sendNotTest():
+    msg = "TEST"
+    bot.send_message(chat_id=chat_id, text= msg, parse_mode='HTML')
 
 
 def main(): 
     #bot.polling()
-    sendNot()
-
+    sendNotTest()
 if __name__ == '__main__':
     main()
