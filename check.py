@@ -98,7 +98,8 @@ def main():
     #fileop.readFromDoc()
     #print(fileop.readFromDoc2())
     #codes, fullarr = fileop.readFromDoc(); print(fullarr)
-    fileop.writeToCSV()
+    while(1):
+        fileop.writeToCSV()
 
 if __name__ == '__main__':
     main()
