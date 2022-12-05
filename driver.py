@@ -7,7 +7,6 @@ class Driver:
         self.url = url
         options = Options()
         options.headless = True
-        options.add_argument("--window-size=1920,1080")
         options.page_load_strategy = 'eager'
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
