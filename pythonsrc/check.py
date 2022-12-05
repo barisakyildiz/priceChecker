@@ -1,18 +1,20 @@
 import pandas as pd
 import driver
+import telegram
+from os import system
 
 class FileOp:
     def __init__(self):
-        self.url_docx_name = "dataset.docx"
-        self.url_file_name = "producturls.csv"
+        self.url_docx_name = "dataset.txt"
         self.prices_file_name = "prices.csv"
         self.SAVE_TO_CSV = True
         self.PRICES_CSV = "prices.csv"
         self.url = ""
+        self.SEND_NOTIFICATION = False
     
     def readFromDoc(self):
         temp_total_code = []; temp = []; temp_total_full = []; temp2 = []
-        with open('dataset.txt', encoding="utf-8") as f:
+        with open(self.url_docx_name, encoding="utf-8") as f:
             lines = f.readlines()
         for string in lines:
             if string != '\n':
@@ -43,16 +45,19 @@ class FileOp:
         return temp_total, _
     
     def writeToCSV(self):
+        old_df = self.getFromUrl(); old_df = old_df.to_dict(); old_counter = 0
         arr, _ = self.createLinks(); updated = []; dicti = {}; group_number = 0
         if self.SAVE_TO_CSV:
-            print(arr)
             for prod_group in arr:
                 for prod in prod_group:
+                    old_price = int(old_df["discounted_price"][old_counter])
                     print("\n\nCURRENT URL --> {}\n\n".format(prod))
                     dri = driver.Driver(str(prod))
                     dicti["name"] = _[group_number][prod_group.index(prod)]
                     try:
                         discounted_price = (dri.findPrice())[1]; price = (dri.findDiscount())[1]
+                        if int(discounted_price) != int(old_price):
+                            self.SEND_NOTIFICATION = True #test et print ekleyerek
                         dicti["price"] = price
                         dicti["discounted_price"] = discounted_price
                         dicti["discount_percentage"] = dri.findPercentage(price, discounted_price)
@@ -65,29 +70,28 @@ class FileOp:
                     dicti["group_number"] = group_number
                     print(dicti)
                     del dri
-                    updated.append(dicti); dicti = {}
+                    updated.append(dicti);
+                    for i in range(1, 100):
+                        if old_counter - i >= 0 and old_df["group_number"][old_counter] == old_df["group_number"][old_counter - i]:
+                            pass
+                        elif (old_counter - i <= 0) or (old_counter - i >= 0 and old_df["group_number"][old_counter] != old_df["group_number"][old_counter - i]):
+                            minus = i - 1
+                            break
+                    if self.SEND_NOTIFICATION == True and minus != 0:
+                        msg = telegram.createMessage(old_price, discounted_price, dicti["discount_percentage"], dicti["url"], dicti["name"], old_df["discounted_price"][old_counter - minus], old_df["discount_percentage"][old_counter - minus])
+                        telegram.sendNot(msg=msg)
+                    old_counter += 1
+                    dicti = {}
+                    self.SEND_NOTIFICATION = False
+                    system("clear")
                 group_number += 1
             df = pd.DataFrame(updated)
             df.to_csv(self.PRICES_CSV, mode="w")
             
 
     def getFromUrl(self):
-        url_dataframe = pd.read_csv(self.url_file_name)
+        url_dataframe = pd.read_csv(self.prices_file_name)
         return url_dataframe
-    
-    def processProd(self):
-        updated = []
-        dataframe = self.getFromUrl()
-        for prod in dataframe.to_dict("records"):
-            print("BEFORE ---> " + str(prod))
-            webop = WebOp(prod["url"])
-            html = webop.getHTML(prod["url"])
-            prod["price"] = webop.returnPrice(html)
-            prod["alert"] = prod["price"] < prod["alert_price"]
-            updated.append(prod)
-            print("AFTER ---> " + str(prod) + "\n\n")
-            del webop
-        return pd.DataFrame(updated)
 
 
 def main():

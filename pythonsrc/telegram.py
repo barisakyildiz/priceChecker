@@ -1,4 +1,3 @@
-import os
 import telebot
 
 """API_KEY = os.getenv('API_KEY')
@@ -10,18 +9,25 @@ API_KEY = '5871023940:AAEaD45sHcXp8xtOB-ggSq6Q8RBsHWEzCf4'
 bot = telebot.TeleBot(API_KEY)
 chat_id = '1498114607'
 
-@bot.message_handler(commands=['Greet'])
+def createMessage(old_price, new_price, discount, url, name, our_price, our_discount):
+    mesaj = "{}\n\
+{}p стало {}p спп {}%\
+{}\n\
+Наша цена {}p - - спп {}%".format(name, old_price, new_price, discount, url, our_price, our_discount)
+    return mesaj
+
+@bot.message_handler(commands=['start'])
 def greet(message):
     bot.reply_to(message, "Hey! Hows it Going")
 
-@bot.message_handler(commands=['Sa'])
-def sendNot(message):
+def sendNot(msg):
     bot.send_message(chat_id=chat_id,
-                     text="Test Notification",
+                     text=msg,
                      parse_mode='HTML')
 
-def main():
-    bot.polling()
+
+def main(): 
+    #bot.polling()
     sendNot()
 
 if __name__ == '__main__':
