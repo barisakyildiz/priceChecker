@@ -50,13 +50,13 @@ class FileOp:
         if self.SAVE_TO_CSV:
             for prod_group in arr:
                 for prod in prod_group:
-                    old_price = int(old_df["discounted_price"][old_counter])
+                    old_price = old_df["discounted_price"][old_counter]
                     print("\n\nCURRENT URL --> {}\n\n".format(prod))
                     dri = driver.Driver(str(prod))
                     dicti["name"] = _[group_number][prod_group.index(prod)]
                     try:
                         discounted_price = (dri.findPrice())[1]; price = (dri.findDiscount())[1]
-                        if int(discounted_price) != int(old_price):
+                        if discounted_price != old_price:
                             self.SEND_NOTIFICATION = True #test et print ekleyerek
                         dicti["price"] = price
                         dicti["discounted_price"] = discounted_price
@@ -78,8 +78,9 @@ class FileOp:
                             minus = i - 1
                             break
                     if self.SEND_NOTIFICATION == True and minus != 0:
-                        msg = telegram.createMessage(old_price, discounted_price, dicti["discount_percentage"], dicti["url"], dicti["name"], old_df["discounted_price"][old_counter - minus], old_df["discount_percentage"][old_counter - minus])
-                        telegram.sendNot(msg=msg)
+                        #msg = telegram.createMessage(old_price, discounted_price, dicti["discount_percentage"], dicti["url"], dicti["name"], old_df["discounted_price"][old_counter - minus], old_df["discount_percentage"][old_counter - minus])
+                        #telegram.sendNot(msg=msg)
+                        pass
                     old_counter += 1
                     dicti = {}
                     self.SEND_NOTIFICATION = False
@@ -98,8 +99,7 @@ def main():
     #fileop.readFromDoc()
     #print(fileop.readFromDoc2())
     #codes, fullarr = fileop.readFromDoc(); print(fullarr)
-    while(1):
-        fileop.writeToCSV()
+    fileop.writeToCSV()
 
 if __name__ == '__main__':
     main()

@@ -1,27 +1,27 @@
 ,name,price,discounted_price,discount_percentage,url,group_number
 0,16429349 rem-watch-LUX-42/44/черный,1978,791,60,https://www.wildberries.ru/catalog/16429349/detail.aspx?,0
-1,37078649 AQSA-LUX-42/44/черный,1540,739,52,https://www.wildberries.ru/catalog/37078649/detail.aspx?,0
+1,37078649 AQSA-LUX-42/44/черный,1513,680,55,https://www.wildberries.ru/catalog/37078649/detail.aspx?,0
 2,29798477 Brono Mo-LUX-42/44/черный,2800,1008,64,https://www.wildberries.ru/catalog/29798477/detail.aspx?,0
 3,16429348 rem-watch-LUX-42/44/серебристый,2002,700,65,https://www.wildberries.ru/catalog/16429348/detail.aspx?,1
-4,37078651 AQSA-LUX-42/44/серебристый,1455,683,53,https://www.wildberries.ru/catalog/37078651/detail.aspx?,1
+4,37078651 AQSA-LUX-42/44/серебристый,1453,624,57,https://www.wildberries.ru/catalog/37078651/detail.aspx?,1
 5,29798479 Brono Mo-LUX-42/44/серебристый,2800,868,69,https://www.wildberries.ru/catalog/29798479/detail.aspx?,1
 6,17211534 rem-watch-LUX-42/44/розовый,2000,700,65,https://www.wildberries.ru/catalog/17211534/detail.aspx?,2
-7,37078650 AQSA-LUX-42/44/розовый,1450,638,56,https://www.wildberries.ru/catalog/37078650/detail.aspx?,2
+7,37078650 AQSA-LUX-42/44/розовый,1455,567,61,https://www.wildberries.ru/catalog/37078650/detail.aspx?,2
 8,29798481 Brono Mo-LUX-42/44/розовый,2800,1008,64,https://www.wildberries.ru/catalog/29798481/detail.aspx?,2
 9,26056212 rem-watch-LUX-42/44/перламутровый,2112,696,67,https://www.wildberries.ru/catalog/26056212/detail.aspx?,3
 10,40718522 Brono Mo -LUX-42/44/перламутровый,2800,1008,64,https://www.wildberries.ru/catalog/40718522/detail.aspx?,3
 11,32246655 rem-watch-LUX-42/44/серебристо-пудровый,2000,700,65,https://www.wildberries.ru/catalog/32246655/detail.aspx?,4
 12,40718523 Brono Mo -LUX-42/44/ серебристо-пудровый,2800,1008,64,https://www.wildberries.ru/catalog/40718523/detail.aspx?,4
 13,16429347 rem-watch-LUX-38/40/черный,2200,748,66,https://www.wildberries.ru/catalog/16429347/detail.aspx?,5
-14,37077392  AQSA-LUX-38/40/черный,1485,594,60,https://www.wildberries.ru/catalog/37077392/detail.aspx?,5
+14,37077392  AQSA-LUX-38/40/черный,1486,624,58,https://www.wildberries.ru/catalog/37077392/detail.aspx?,5
 15,16429346 rem-watch-LUX-38/40/серебристый,2150,666,69,https://www.wildberries.ru/catalog/16429346/detail.aspx?,6
-16,37077394 AQSA-LUX-38/40/серебристый,1490,596,60,https://www.wildberries.ru/catalog/37077394/detail.aspx?,6
+16,37077394 AQSA-LUX-38/40/серебристый,1661,681,59,https://www.wildberries.ru/catalog/37077394/detail.aspx?,6
 17,16429345 rem-watch-LUX-38/40/розовый,2011,703,65,https://www.wildberries.ru/catalog/16429345/detail.aspx?,7
-18,37077393 AQSA-LUX-38/40/розовый,1465,586,60,https://www.wildberries.ru/catalog/37077393/detail.aspx?,7
+18,37077393 AQSA-LUX-38/40/розовый,1462,511,65,https://www.wildberries.ru/catalog/37077393/detail.aspx?,7
 19,19109207 rem-watch-LUX-38/40/розовое золото,2200,704,68,https://www.wildberries.ru/catalog/19109207/detail.aspx?,8
-20,102127952 AQSA-LUX-38/40/розовое золото,990,594,40,https://www.wildberries.ru/catalog/102127952/detail.aspx?,8
+20,102127952 AQSA-LUX-38/40/розовое золото,1096,624,43,https://www.wildberries.ru/catalog/102127952/detail.aspx?,8
 21,"32245988 rem-watch-LUX-38/40/серебро, розовое золото",2200,748,66,https://www.wildberries.ru/catalog/32245988/detail.aspx?,9
-22,"102127951 AQSA-LUX-38/40/серебро, розовое золото",990,594,40,https://www.wildberries.ru/catalog/102127951/detail.aspx?,9
+22,"102127951 AQSA-LUX-38/40/серебро, розовое золото",1096,624,43,https://www.wildberries.ru/catalog/102127951/detail.aspx?,9
 23,19140005 rem-watch-LUX/2.0/42/44/черный,4490,1122,75,https://www.wildberries.ru/catalog/19140005/detail.aspx?,10
 24,29231169 Brono Mo-LUX/2.0/42/44/черный,3500,1330,62,https://www.wildberries.ru/catalog/29231169/detail.aspx?,10
 25,19140004 rem-watch-LUX/2.0/42/44/серебристый,3920,1136,71,https://www.wildberries.ru/catalog/19140004/detail.aspx?,11
@@ -30,7 +30,7 @@
 28,29330326 Brono Mo-LUX/2.0/42/44/розовое золото,3500,1260,64,https://www.wildberries.ru/catalog/29330326/detail.aspx?,12
 29,14377462 rem-watch-М-38/40/серебристый,1190,357,70,https://www.wildberries.ru/catalog/14377462/detail.aspx?,13
 30,12401178  Marchelite-М-38/40/серебристый,716,358,50,https://www.wildberries.ru/catalog/12401178/detail.aspx?,13
-31,18648966 AQSA- М-38/40/серебристый,1388,347,75,https://www.wildberries.ru/catalog/18648966/detail.aspx?,13
+31,18648966 AQSA- М-38/40/серебристый,1397,321,77,https://www.wildberries.ru/catalog/18648966/detail.aspx?,13
 32,15843704 rem-watch-М-38/40/розовый,1190,357,70,https://www.wildberries.ru/catalog/15843704/detail.aspx?,14
 33,12401177 Marchelite-М-38/40/серебристый,716,358,50,https://www.wildberries.ru/catalog/12401177/detail.aspx?,14
 34,18648967 AQSA- М-38/40/розовый,1388,347,75,https://www.wildberries.ru/catalog/18648967/detail.aspx?,14
@@ -38,7 +38,7 @@
 36,12401176 Marchelite-М-38/40/черный,716,358,50,https://www.wildberries.ru/catalog/12401176/detail.aspx?,15
 37,27109819 AQSA- М-38/40/черный,1388,347,75,https://www.wildberries.ru/catalog/27109819/detail.aspx?,15
 38,14057929 rem-watch-М-38/40/золотой,1090,348,68,https://www.wildberries.ru/catalog/14057929/detail.aspx?,15
-39,27109821 AQSA- М-38/40/золотой,1388,347,75,https://www.wildberries.ru/catalog/27109821/detail.aspx?,15
+39,27109821 AQSA- М-38/40/золотой,1322,290,78,https://www.wildberries.ru/catalog/27109821/detail.aspx?,15
 40,14057934 rem-watch-М-42/44/черный,935,317,66,https://www.wildberries.ru/catalog/14057934/detail.aspx?,16
 41,113408542 HaruAccessories-М-42/44/черный,750,337,55,https://www.wildberries.ru/catalog/113408542/detail.aspx?,16
 42,92083971 Lux Device-М-42/44/черный,1100,396,64,https://www.wildberries.ru/catalog/92083971/detail.aspx?,16
@@ -53,11 +53,11 @@
 51,14740197 rem-watch-38/40/белый,807,217,73,https://www.wildberries.ru/catalog/14740197/detail.aspx?,20
 52,90566975 Banside-38/40/белый,473,236,50,https://www.wildberries.ru/catalog/90566975/detail.aspx?,20
 53,3149359 HaruAccessories-42/44/белый,OUT OF STOCK,OUT OF STOCK,OUT OF STOCK,https://www.wildberries.ru/catalog/3149359/detail.aspx?,20
-54,13851536 rem-watch-38/40/черный,807,217,73,https://www.wildberries.ru/catalog/13851536/detail.aspx?,21
+54,13851536 rem-watch-38/40/черный,OUT OF STOCK,OUT OF STOCK,OUT OF STOCK,https://www.wildberries.ru/catalog/13851536/detail.aspx?,21
 55,90566969 Banside-38/40/черный,498,249,50,https://www.wildberries.ru/catalog/90566969/detail.aspx?,21
 56,25910205 HaruAccessories-42/44/черный,510,249,51,https://www.wildberries.ru/catalog/25910205/detail.aspx?,21
 57,16548980 rem-watch-38/40/черный,807,217,73,https://www.wildberries.ru/catalog/16548980/detail.aspx?,22
-58,90566981 Banside-38/40/пудровый,498,249,50,https://www.wildberries.ru/catalog/90566981/detail.aspx?,22
+58,90566981 Banside-38/40/пудровый,OUT OF STOCK,OUT OF STOCK,OUT OF STOCK,https://www.wildberries.ru/catalog/90566981/detail.aspx?,22
 59,25913942 HaruAccessories-42/44/пудровый,510,249,51,https://www.wildberries.ru/catalog/25913942/detail.aspx?,22
 60,14740198 rem-watch-38/40/голубой,810,234,71,https://www.wildberries.ru/catalog/14740198/detail.aspx?,23
 61,90566974 Banside-38/40/голубой,494,247,50,https://www.wildberries.ru/catalog/90566974/detail.aspx?,23
@@ -76,28 +76,28 @@
 74,83783424 rem-univ-M-20/черный,600,360,40,https://www.wildberries.ru/catalog/83783424/detail.aspx?,28
 75,31373304 CaseTime-univ-M-20/черный,899,296,67,https://www.wildberries.ru/catalog/31373304/detail.aspx?,28
 76,8465444 Colorful.-univ-M-20/черный,1300,520,60,https://www.wildberries.ru/catalog/8465444/detail.aspx?,28
-77,77256867 AQSA-univ-M-20/черный,807,347,57,https://www.wildberries.ru/catalog/77256867/detail.aspx?,28
+77,77256867 AQSA-univ-M-20/черный,805,322,60,https://www.wildberries.ru/catalog/77256867/detail.aspx?,28
 78,83783422 rem-univ-M-20/серебристый,600,360,40,https://www.wildberries.ru/catalog/83783422/detail.aspx?,29
 79,28794872 CaseTime-univ-M-20/серебристый,899,287,68,https://www.wildberries.ru/catalog/28794872/detail.aspx?,29
 80,35471086 Colorful.-univ-M-20/серебристый,1300,520,60,https://www.wildberries.ru/catalog/35471086/detail.aspx?,29
-81,77256868 AQSA-univ-M-20/серебристый,807,347,57,https://www.wildberries.ru/catalog/77256868/detail.aspx?,29
+81,77256868 AQSA-univ-M-20/серебристый,805,322,60,https://www.wildberries.ru/catalog/77256868/detail.aspx?,29
 82,83783422 rem-univ-M-20/розовое золото,600,360,40,https://www.wildberries.ru/catalog/83783422/detail.aspx?,30
 83,31373303 CaseTime-univ-M-20/розовое золото,899,296,67,https://www.wildberries.ru/catalog/31373303/detail.aspx?,30
 84,39978967 Colorful.-univ-M-20/розовое золото,1300,520,60,https://www.wildberries.ru/catalog/39978967/detail.aspx?,30
-85,77256869 AQSA-univ-M-20/розовое золото,807,347,57,https://www.wildberries.ru/catalog/77256869/detail.aspx?,30
+85,77256869 AQSA-univ-M-20/розовое золото,805,322,60,https://www.wildberries.ru/catalog/77256869/detail.aspx?,30
 86,83791696 rem-univ-Ne-20/черный,390,343,12,https://www.wildberries.ru/catalog/83791696/detail.aspx?,31
 87,29193792 UNAX- univ-Ne-20/черный,990,376,62,https://www.wildberries.ru/catalog/29193792/detail.aspx?,31
-88,83791693 rem-univ-Ne-20/белый,390,343,12,https://www.wildberries.ru/catalog/83791693/detail.aspx?,32
-89,29193799 UNAX- univ-Ne-20/белый,OUT OF STOCK,OUT OF STOCK,OUT OF STOCK,https://www.wildberries.ru/catalog/29193799/detail.aspx?,32
+88,83791693 rem-univ-Ne-20/белый,392,344,12,https://www.wildberries.ru/catalog/83791693/detail.aspx?,32
+89,29193799 UNAX- univ-Ne-20/белый,990,346,65,https://www.wildberries.ru/catalog/29193799/detail.aspx?,32
 90,43917992 univ-rem-22/черный,1375,825,40,https://www.wildberries.ru/catalog/43917992/detail.aspx?,33
-91,91943507 RemeShop-rem-22/черный,1780,747,58,https://www.wildberries.ru/catalog/91943507/detail.aspx?,33
-92,97544314  casetime-rem-22/черный,1499,524,65,https://www.wildberries.ru/catalog/97544314/detail.aspx?,33
+91,91943507 RemeShop-rem-22/черный,1790,680,62,https://www.wildberries.ru/catalog/91943507/detail.aspx?,33
+92,97544314  casetime-rem-22/черный,OUT OF STOCK,OUT OF STOCK,OUT OF STOCK,https://www.wildberries.ru/catalog/97544314/detail.aspx?,33
 93,112000560 adeco-rem-22/черный ,1699,662,61,https://www.wildberries.ru/catalog/112000560/detail.aspx?,33
 94,43917992 univ-rem-22/черный,1375,825,40,https://www.wildberries.ru/catalog/43917992/detail.aspx?,34
-95,100189198 RemeShop-rem-22/черный,1830,622,66,https://www.wildberries.ru/catalog/100189198/detail.aspx?,34
+95,100189198 RemeShop-rem-22/черный,1850,647,65,https://www.wildberries.ru/catalog/100189198/detail.aspx?,34
 96,97544311 casetime-rem-22/серебристый,1499,524,65,https://www.wildberries.ru/catalog/97544311/detail.aspx?,34
 97,114025540 adeco-rem-22/серебристый ,1626,634,61,https://www.wildberries.ru/catalog/114025540/detail.aspx?,34
 98,83784472 rem-univ-M-22/черный,600,360,40,https://www.wildberries.ru/catalog/83784472/detail.aspx?,35
-99,78078170 sonder electronics-univ-M-22/черный,700,329,53,https://www.wildberries.ru/catalog/78078170/detail.aspx?,35
+99,78078170 sonder electronics-univ-M-22/черный,700,287,59,https://www.wildberries.ru/catalog/78078170/detail.aspx?,35
 100,27092835 zen-store- univ-M-22/черный,850,365,57,https://www.wildberries.ru/catalog/27092835/detail.aspx?,35
 101,33295509 casetime-univ-M-22/черный,899,287,68,https://www.wildberries.ru/catalog/33295509/detail.aspx?,35
