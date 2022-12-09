@@ -10,11 +10,12 @@ bot = telebot.TeleBot(API_KEY)
 chat_id = '1498114607'
 nikita_chat_id = '525390336'
 
-def createMessage(old_price, new_price, discount, url, name, our_price, our_discount):
+def createMessage(old_price, new_price, discount, url, name, our_price, our_discount, our_url):
     mesaj = "{}\n\
 {}p стало {}p спп {}%\
 {}\n\
-Наша цена {}p - - спп {}%".format(name, old_price, new_price, discount, url, our_price, our_discount)
+Наша цена {}p - - спп {}%\n\
+{}".format(name, old_price, new_price, discount, url, our_price, our_discount)
     return mesaj
 
 @bot.message_handler(commands=['start'])
@@ -34,5 +35,6 @@ def sendNotTest():
 def main(): 
     #bot.polling()
     sendNotTest()
+    
 if __name__ == '__main__':
     main()

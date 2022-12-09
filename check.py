@@ -78,7 +78,7 @@ class FileOp:
                             minus = i - 1
                             break
                     if self.SEND_NOTIFICATION == True and minus != 0:
-                        #msg = telegram.createMessage(old_price, discounted_price, dicti["discount_percentage"], dicti["url"], dicti["name"], old_df["discounted_price"][old_counter - minus], old_df["discount_percentage"][old_counter - minus])
+                        msg = telegram.createMessage(old_price, discounted_price, dicti["discount_percentage"], dicti["url"], dicti["name"], old_df["discounted_price"][old_counter - minus], old_df["discount_percentage"][old_counter - minus], old_df["url"][old_counter - minus])
                         #telegram.sendNot(msg=msg)
                         pass
                     old_counter += 1

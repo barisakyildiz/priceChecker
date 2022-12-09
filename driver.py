@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from time import sleep
+import pickle
 
 class Driver:
     def __init__(self, url):
@@ -17,7 +18,8 @@ class Driver:
         self.html = self.driver.page_source
         self.where = self.html.find("price-block__final-price")
         self.where_old = self.html.find("price-block__old-price j-wba-card-item-show")
-    
+        self.PICKLES_PATH = "pick.pkl"
+
     def findPrice(self):
         price = self.html[self.where:(self.where) + 60]
         price = price.replace('&nbsp', ''); price = price.replace(' ', ''); price = price.replace('price-block__final-price">', ''); price = price.replace(';', ' ')
@@ -35,6 +37,16 @@ class Driver:
         percentage = new_price / old_price; percentage = percentage * 100
         percentage = 100 - percentage
         return int(percentage)
+
+    def dumpCookies(self, driver):
+        with open(self.PICKLES_PATH, 'wb') as filehandler:
+            pickle.dump(driver.get_cookies(), filehandler)
+    
+    def loadCookies(self, driver):
+     with open(self.PICKLES_PATH, 'rb') as cookiesfile:
+         cookies = pickle.load(cookiesfile)
+         for cookie in cookies:
+            driver.add_cookie(cookie)
 
 def main():
     driver = Driver('https://www.wildberries.ru/catalog/16429349/detail.aspx?') #For Testing
