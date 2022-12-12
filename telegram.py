@@ -14,8 +14,8 @@ def createMessage(old_price, not_disc_old, not_disc_newPrice, new_price, url, ke
     mesaj = "{}\n\
 {}p {}p стало {}p {}p спп {}%\
 {}\n\
-Наша цена {}p - - спп {}%\n\
-{}".format(name, old_price, not_disc_old, new_price, not_disc_newPrice, keke, url, our_price, not_disc_our, our_kekePerc, our_url)
+Наша цена {}p {}p спп {}%\n\
+{}".format(name, not_disc_old, old_price, not_disc_newPrice, new_price, keke, url, not_disc_our, our_price, our_kekePerc, our_url)
     return mesaj
 
 @bot.message_handler(commands=['start'])
