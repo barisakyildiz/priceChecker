@@ -22,7 +22,7 @@ class Driver:
         self.loadCookies(self.driver)
         self.driver.get(self.url)
         self.driver.maximize_window()
-        sleep(5)
+        sleep(4000)
         self.element = self.driver.find_elements(by=By.CLASS_NAME, value='product-page__price-block')
         print("------------------------------------")
         print(self.element)

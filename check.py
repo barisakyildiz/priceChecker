@@ -51,6 +51,7 @@ class FileOp:
             for prod_group in arr:
                 for prod in prod_group:
                     old_price = old_df["discounted_price"][old_counter]
+                    not_disc_old = old_df["without_disc"][old_counter]
                     print("\n\nCURRENT URL --> {}\n\n".format(prod))
                     dri = driver.Driver(str(prod))
                     dicti["name"] = _[group_number][prod_group.index(prod)]
@@ -58,6 +59,8 @@ class FileOp:
                         discounted_price = (dri.findPrice())[1]; price = (dri.findDiscount())[1]
                         if discounted_price != old_price:
                             self.SEND_NOTIFICATION = True #test et print ekleyerek
+                        dicti["without_disc"] = dri.notDiscountPrice()
+                        dicti["keke_disc"] = dri.KeKePercentage()
                         dicti["price"] = price
                         dicti["discounted_price"] = discounted_price
                         dicti["discount_percentage"] = dri.findPercentage(price, discounted_price)
@@ -78,8 +81,8 @@ class FileOp:
                             minus = i - 1
                             break
                     if self.SEND_NOTIFICATION == True and minus != 0:
-                        msg = telegram.createMessage(old_price, discounted_price, dicti["discount_percentage"], dicti["url"], dicti["name"], old_df["discounted_price"][old_counter - minus], old_df["discount_percentage"][old_counter - minus], old_df["url"][old_counter - minus])
-                        #telegram.sendNot(msg=msg)
+                        msg = telegram.createMessage(old_price, not_disc_old, dicti["without_disc"], discounted_price, dicti["url"], dicti["keke_disc"], dicti["name"], old_df["discounted_price"][old_counter - minus], old_df["url"][old_counter - minus], old_df["keke_disc"][old_counter - minus], old_df["without_disc"][old_counter - minus])
+                        telegram.sendNot(msg=msg)
                         pass
                     old_counter += 1
                     dicti = {}
@@ -99,7 +102,8 @@ def main():
     #fileop.readFromDoc()
     #print(fileop.readFromDoc2())
     #codes, fullarr = fileop.readFromDoc(); print(fullarr)
-    fileop.writeToCSV()
+    while(1):
+        fileop.writeToCSV()
 
 if __name__ == '__main__':
     main()
