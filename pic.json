@@ -1,0 +1,31 @@
+[
+    {
+        "domain": ".stackoverflow.com",
+        "expiry": 1702125481,
+        "httpOnly": false,
+        "name": "OptanonConsent",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "datestamp=2022-12-09+12%3a38%3a01Z&groups=C0001%3a1%2cC0002%3a1%2cC0003%3a1%2cC0004%3a1%2cC0005%3a0"
+    },
+    {
+        "domain": ".stackoverflow.com",
+        "expiry": 1686314281,
+        "httpOnly": true,
+        "name": "acct",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "t=8soLdnlEs54N1itIKdYbHbDlQul2wQrM&s=ETH5lARCemDuILW%2fTYBfIwm67k5%2fQUQJ"
+    },
+    {
+        "domain": ".stackoverflow.com",
+        "expiry": 1705149446,
+        "httpOnly": true,
+        "name": "prov",
+        "path": "/",
+        "secure": false,
+        "value": "f426c80c-8936-1c67-3fd7-b451eea79ece"
+    }
+]
