@@ -7,13 +7,14 @@ from selenium.webdriver.common.by import By
 
 class Driver:
     def __init__(self, url):
-        self.url = "https://www.wildberries.ru/catalog/16429349/detail.aspx?"
+        self.url = "https://www.wildberries.ru/catalog/29798481/detail.aspx?"
         self.PICKLES_PATH = 'pic.pkl'
         options = Options()
         options.headless = False
         options.page_load_strategy = 'eager'
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--disable-geolocation')
         DRIVER_PATH = '/home/da3rny/Tornacı/priceChecker/chromedriver'
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH, options=options)
         self.action = webdriver.ActionChains(self.driver)
@@ -22,7 +23,7 @@ class Driver:
         self.loadCookies(self.driver)
         self.driver.get(self.url)
         self.driver.maximize_window()
-        sleep(4000)
+        sleep(25)
         self.element = self.driver.find_elements(by=By.CLASS_NAME, value='product-page__price-block')
         print("------------------------------------")
         print(self.element)
@@ -30,12 +31,14 @@ class Driver:
         for element in self.element:
             try:
                 self.action.move_to_element(element)
+                self.action.move_by_offset(-15, 0)
                 self.action.perform()
                 sleep(1)
             except Exception as e:
                 print("NO SIZE AND SMT" + str(e))
                 sleep(1)
         sleep(5)
+        self.dumpCookies(self.driver)
         self.html = self.driver.page_source
         #print(self.html)
         print("------------------------------------")

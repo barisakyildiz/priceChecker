@@ -1,7 +1,7 @@
 import pandas as pd
 import driver
 import telegram
-from os import system
+from time import sleep
 
 class FileOp:
     def __init__(self):
@@ -57,7 +57,8 @@ class FileOp:
                     dicti["name"] = _[group_number][prod_group.index(prod)]
                     try:
                         discounted_price = (dri.findPrice())[1]; price = (dri.findDiscount())[1]
-                        if discounted_price != old_price:
+                        if discounted_price != int(old_price):
+                            print("------------- OLD --> {} NEW --> {} ---------------".format(old_price, discounted_price))
                             self.SEND_NOTIFICATION = True #test et print ekleyerek
                         dicti["without_disc"] = dri.notDiscountPrice()
                         dicti["keke_disc"] = dri.KeKePercentage()
@@ -80,13 +81,21 @@ class FileOp:
                         elif (old_counter - i <= 0) or (old_counter - i >= 0 and old_df["group_number"][old_counter] != old_df["group_number"][old_counter - i]):
                             minus = i - 1
                             break
-                    if self.SEND_NOTIFICATION == True and minus != 0:
-                        msg = telegram.createMessage(old_price, not_disc_old, dicti["without_disc"], discounted_price, dicti["url"], dicti["keke_disc"], dicti["name"], old_df["discounted_price"][old_counter - minus], old_df["url"][old_counter - minus], old_df["keke_disc"][old_counter - minus], old_df["without_disc"][old_counter - minus])
+                    """if self.SEND_NOTIFICATION == True and minus != 0:
+                        msg = telegram.createMessage(old_price, not_disc_old, dicti["without_disc"], discounted_price, dicti["url"], dicti["keke_disc"], dicti["name"][9:], old_df["discounted_price"][old_counter - minus], old_df["url"][old_counter - minus], old_df["keke_disc"][old_counter - minus], old_df["without_disc"][old_counter - minus])
                         telegram.sendNot(msg=msg)
-                        pass
+                    elif self.SEND_NOTIFICATION == True and minus == 0:
+                        msg = telegram.createOurMessage(dicti["name"][9:], old_df["without_disc"][old_counter], old_df["discounted_price"][old_counter], dicti["without_disc"], dicti["discounted_price"], dicti["keke_disc"], dicti["url"])
+                        count = 1
+                        while(dicti["group_number"] == old_df["group_number"][old_counter + count]):
+                            msg = msg + telegram.createOtherMessage((old_df["name"][old_counter + count])[9:], old_df["without_disc"][old_counter + count], old_df["discounted_price"][old_counter + count], old_df["keke_disc"][old_counter + count], old_df["url"][old_counter + count])
+                            count += 1
+                        count = 1
+                        telegram.sendNot(msg)"""
                     old_counter += 1
                     dicti = {}
                     self.SEND_NOTIFICATION = False
+                    sleep(10)
                 group_number += 1
             df = pd.DataFrame(updated)
             df.to_csv(self.PRICES_CSV, mode="w")

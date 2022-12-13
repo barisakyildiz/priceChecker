@@ -19,13 +19,13 @@ class Driver:
         self.driver.get(url); sleep(3)
         self.loadCookies(self.driver)
         self.driver.get(self.url)
-        self.driver.maximize_window(); sleep(5)
+        self.driver.maximize_window(); sleep(10)
         self.element = self.driver.find_elements(by=By.CLASS_NAME, value='price-block__content')
         print(self.element)
         for element in self.element:
             try:
                 self.action.move_to_element(element)
-                self.action.move_by_offset(-30, 0)
+                self.action.move_by_offset(-15, 0)
                 self.action.perform()
                 sleep(2)
                 break;
