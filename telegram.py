@@ -6,12 +6,9 @@ print("BOT TOKEN --> " + str(API_KEY))
 bot = telebot.TeleBot(API_KEY)
 chat_id = os.getenv('CHAT_ID')"""
 
-API_KEY = '5871023940:AAEaD45sHcXp8xtOB-ggSq6Q8RBsHWEzCf4'
+API_KEY = ''
 bot = telebot.TeleBot(API_KEY)
-chat_id = '1498114607'
-zafer_chat_id = '525390336'
-nabi_id = '480262349'
-calisan_id = '398191830'
+chat_id = ''
 
 def createMessage(old_price, not_disc_old, not_disc_newPrice, new_price, url, keke, name, our_price, our_url, our_kekePerc, not_disc_our):
     mesaj = "{}\n\
@@ -42,22 +39,10 @@ def sendNot(msg):
         bot.send_message(chat_id=chat_id, text=msg, parse_mode='HTML'); sleep(1)
     except Exception as e:
         pass
-    try:
-        bot.send_message(chat_id=zafer_chat_id, text=msg, parse_mode='HTML'); sleep(1)
-    except Exception as e:
-        pass
-    try:
-        bot.send_message(chat_id=nabi_id, text=msg, parse_mode='HTML'); sleep(1)
-    except Exception as e:
-        pass
-    try:    
-        bot.send_message(chat_id=calisan_id, text=msg, parse_mode='HTML'); sleep(1)
-    except Exception as e:
-        pass
 
 def sendNotTest():
     msg = "DO NOT CARE THE BEFORE MESSAGES"
-    bot.send_message(chat_id=nabi_id, text= msg, parse_mode='HTML')
+    bot.send_message(chat_id=chat_id, text= msg, parse_mode='HTML')
 
 
 def main(): 
